@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="decorator" content="포트폴리오, 웹퍼블리싱, 웹디자인, UI/UX, UI, UX, javascript">
+    <meta name="format-detection" content="telephone=no">
+    <meta property="og:url" content="http://jonquil.dothome.co.kr">
+    <meta property="og:title" content="Web designer : Son's portfolio!">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="iimage/og_sns.png">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="800">
+    <meta property="og:description" content="안녕하세요. 웹디자이너 손정은의 포트폴리오 입니다.">
+    <title>Son's portfolio</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../iimg/favicon.ico">
+    <link rel="stylesheet" href="css/basic.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> 
+</head>
+<body>
+<div id="wrap">
+<!---------------------------------------------->
+<style>
+body{position: relative;}
+header{position: absolute; z-index: 999; width: 100vw; height: 40px; top: 0; left: 0;}
+
+.call .tooltip{
+    display: none;
+    position: absolute;
+    top: 25px;
+    left: -120px;
+    width: 200px;
+    font-size: 18px;
+    padding: 15px;
+    line-height: 25px;
+    background-color: #f3f3f3ec;
+    box-shadow: 13px 15px 40px rgba(0, 0, 0, 0.103);
+    border: 6px solid transparent;
+    border-radius: 1.5rem;
+    transform: scale(1); transition: all 0.2s;
+}
+.call .tooltip:hover{transform: scale(1.02); color: rgb(90, 90, 234);}
+.call .tooltip:active{transform: scale(1); transition: 0.05s;}
+.call:hover .tooltip{display: block;}
+
+.main_slide{position:relative; overflow:hidden;}
+/*-----------------*/
+.slide_wrap > button{
+    position:absolute; z-index:10; bottom:45%; box-shadow: 13px 15px 40px rgba(0, 0, 0, 0.103);
+    width: 32px; height:32px; font-size:0; background: rgba(173, 185, 255, 0.479);
+    background: url(../img/icon/arrow.png);
+    transition: all 0.2s;
+}
+.slide_wrap > button.slick-prev{left:100px; background-position: 0 0;}
+.slide_wrap > button.slick-next{right:100px; background-position: -32px 0;}
+/*--------------------*/
+.scene{position: relative; width:100vw; height:100vh; overflow: hidden;}
+.scene._bg1{background: rgb(255, 251, 251) url(img/background1.png);}
+.scene._bg2{background: rgb(250, 255, 255) url(img/background2.png);}
+.scene._bg3{background: rgb(253, 255, 251) url(img/background3.png);}
+/*-------------------*/
+.scene .text_box{
+    width:700px; height:500px; position: absolute; top: 130px; left: 50%; transform: translateX(-50%);
+    margin:0 auto; font-size:30px; text-align:center;
+}
+.scene .text_box p,
+.scene .text_box div,
+.scene .text_box span{opacity:0;}
+.scene .text_box p{font-size: 50px; margin-top: 10px; text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.192);}
+.scene .text_box div{padding: 50px;}
+.scene .text_box span{line-height: 100px;}
+.scene.slick-active .text_box p{ animation: ani 1 0.5s 0.5s both;}
+.scene.slick-active .text_box div{ animation: ani 1 0.5s 0.7s both;}
+.scene.slick-active .text_box span{ animation: ani 1 0.5s 0.6s both;}
+@keyframes ani {
+    0%{ opacity:0; }
+    100%{ opacity:1;}
+}
+/*-------------------*/
+.menu{
+    position: absolute; z-index: 998; bottom: 10px; margin: 0 auto;
+    width: 100vw; height: 200px; background-color: rgba(255, 255, 255, 0.103);
+}
+.menu ul{margin: 0 auto; width: 80vw; text-align: center;}
+.menu ul > li{background-color: #fff;
+    width: 280px; height: 120px; display: inline-block; text-align: center;
+    border-radius: 20px; box-shadow: 17px 20px 40px #d8d8d8; margin: 10px 100px;
+    transform: scale(1); transition: all 0.2s;
+    }
+.menu ul li div{
+    margin: 10px; height: 100px; font-size: 30px; line-height: 100px;
+    border-radius: 7px; transition: all 0.1s;
+}
+.menu ul li div:hover{background-color: rgba(0, 0, 0, 0.02);}
+.menu ul li:hover{transform: scale(1.05);}
+.menu ul li:active{transform: scale(1); transition: 0.05s;}
+/*-----------------------------*/
+.img img{display: inline-block;}
+/*-----------------------------*/
+@media screen and (max-width:500px) {
+    .scene .text_box p{font-size: 45px;}
+    .scene._bg1{background: rgb(255, 251, 251) url(img/mbackground1.png);}
+    .scene._bg2{background: rgb(250, 255, 255) url(img/mbackground2.png);}
+    .scene._bg3{background: rgb(253, 255, 251) url(img/mbackground3.png);}
+    .scene .text_box{
+    width:400px; height:400px;
+    margin:-10% auto 0; font-size:25px; text-align:center;}
+    .scene .text_box span{font-size: 20px;}
+    .slide_wrap > button.slick-prev{left:40px;}
+    .slide_wrap > button.slick-next{right:40px;}
+    .menu ul{width: 100vw;}
+    .menu ul > li{width: 120px; height: 120px; margin: 5px;}
+    .menu ul li div{font-size: 20px; line-height: 100px;}
+}
+</style>
+<header>
+    <div class="logo">
+        <a href="index.html">
+            <img src="img/icon/golo.png" alt="로고">
+        </a>
+    </div>
+    <div class="call">
+        <a href="img/img.zip" download="포트폴리오PDF"><img src="img/icon/download.png" alt=""></a>
+        <a href="img/img.zip" download="포트폴리오PDF"><span class="tooltip">Portfolio PDF</span></a>
+    </div> 
+</header>
+<div class="main_slide">
+    <div class="slide_wrap">
+        <div class="scene _bg1">
+            <div class="text_box">
+                <p>Son Jeong Eun</p>
+                <span>Web designer & publisher</span>
+                <div class="img"><img src="img/icon/gologolo.png" width="300px" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="scene _bg2">
+            <div class="text_box">
+                <p>Skill</p>
+                <span>Ps, Ai, html5, css3, javascript</span>
+                <div class="img">
+                    <img src="img/icon/skill5.png" alt="" width="300px">
+                </div>
+            </div>
+        </div>
+        <div class="scene _bg3">
+            <div class="text_box">
+                <p>License</p>
+                <span>GTQ Photoshop 1급, 웹디자인기능사(soon!)</span>
+                <div class="img"><img src="img/icon/gtq.png" alt=""></div>
+                <div>+ .. More to come ( •̀.̫•́)✧</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="menu">
+    <ul>
+        <li class="project"><a href="index1.html"><div>프로젝트</div></a></li>
+        <li class="design"><a href="index2.html"><div>디자인</div></a></li>
+        <li class="clonecoding"><a href="index3.html"><div>클론코딩</div></a></li>
+    </ul>
+</div>
+
+<footer>
+    <span class="extra"> kity2030@naver.com </span>
+</footer>
+
+<script>
+$('.slide_wrap').slick({
+    dots: false,
+    autoplay: true,
+    autoplaySpeed:2000
+});
+</script>
+<!---------------------------------------------->
+</div>
+</body>
+</html>

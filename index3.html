@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="decorator" content="포트폴리오, 웹퍼블리싱, 웹디자인, UI/UX, UI, UX, javascript">
+    <meta name="format-detection" content="telephone=no">
+    <meta property="og:url" content="http://jonquil.dothome.co.kr">
+    <meta property="og:title" content="Web designer : Son's portfolio!">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="iimage/og_sns.png">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="800">
+    <meta property="og:description" content="안녕하세요. 웹디자이너 손정은의 포트폴리오 입니다.">
+    <title>Son's clonecoding</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../iimg/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/basic.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+</head>
+<body>
+<header class="hd">
+    <div class="logo">
+        <a href="index.html">
+            <img src="img/icon/golo.png" alt="로고">
+        </a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index1.html">project</a></li>
+            <li><a href="index2.html">design</a></li>
+            <li><a href="index3.html">clonecoding</a></li>
+        </ul>
+    </nav>
+    <div class="call">
+        <img src="img/icon/download.png" alt="">
+    </div>
+</header>
+<div>
+<div class="content">
+    <div class="textbox" style="position: absolute; z-index: 999; top: 60px; left: 20px;">
+        <h3 style="font-size:45px">CloneCoding</h3>
+        <p style="font-size:25px">기존 웹페이지의 페이지소스를 분석하여 HTML5, CSS3, Javascript, JQuery를 활용해 구성하였습니다.</p>
+    </div>
+    <div class="sec1">
+        <div class="item corp">
+            <!---<p>네이버개발자센터<br>
+            HTML5 CSS3 Javascript JQuery<br>
+            수업 100%
+            </p>--->
+            <a href="../CloneCoding/navercorp/index.php" target="_blank">Clonecoding</a>
+            <a href="https://www.navercorp.com/" target="_blank">원본.com</a>
+            <p><strong>네이버회사소개</strong><br>수업 100%</p>
+        </div>
+        <div class="item devel">
+            <a href="../CloneCoding/developers/index.html" target="_blank">Clonecoding</a>
+            <a href="https://developers.naver.com/main/" target="_blank">원본.com</a>
+            <p><strong>네이버개발자센터</strong><br>개인 30% 수업 70%%</p>
+        </div>
+        <div class="item kakao">
+            <a href="../CloneCoding/privacy.kakao/index.html" target="_blank">Clonecoding</a>
+            <a href="https://privacy.kakao.com/main" target="_blank">원본.com</a>
+            <p><strong>카카오프라이버시정책</strong><br>개인 50% 수업 50%</p>
+        </div>
+        <div class="item samsung">
+            <a href="../CloneCoding/samsung/index.html" target="_blank">Clonecoding</a>
+            <a href="https://oledera.samsungdisplay.com/" target="_blank">원본.com</a>
+            <p><strong>삼성올레드</strong><br>개인 100%</p>
+        </div>
+        <div class="item non">
+            <a href="../CloneCoding/drclo/index.html" target="_blank">Clonecoding</a>
+            <a href="https://www.drclo.com/ko/index.php" target="_blank">원본.com</a>
+            <p><strong>엔오엔</strong><br>개인 70% 수업 30%</p>
+        </div>
+    </div>
+</div>
+<footer>
+    <span class="extra"> kity2030@naver.com </span>
+</footer>
+</div>
+<style>
+    *{box-sizing: border-box;}
+    .hd{/*background-color: rgba(255, 255, 255, 0.753);*/ position: fixed; z-index: 1000; width: 100%; height: 40px;
+        display: flex; justify-content: space-between; align-items: center;}
+    /*nav ul li{display: inline-block; margin: 0 80px; border-radius: 7px; transition: all 0.2s;}
+    nav ul li a{color: #0071EB;}
+    nav ul li:hover{background-color: #00000015;}*/
+    nav{background : rgba(255, 255, 255, 0)}
+    .bg{background:linear-gradient(to bottom, rgba(255, 255, 255, 0.192), rgb(255, 255, 255))}
+    .call{display: none;}
+    .content{height: 100vh; background: rgb(250, 255, 255) url(img/background3.png);}
+    .sec1{
+        position: relative;
+        width: 80vw;
+        margin: 0 auto;
+        top: 200px;
+        display: grid;
+        grid-template-columns: 500px 250px 250px;
+        grid-template-rows: 120px 120px 120px 120px 120px;
+        grid-gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+    .textbox{margin: 15px 0 0 160px;}
+    .item{
+        border-radius: 3rem; width: 100%; height: 100%; overflow: hidden;
+        filter: contrast(70%) drop-shadow(3px 3px 7px #00000035); transition: all 0.3s;}
+    .item strong{font-size: 22px; line-height: 35px;}
+    .item:hover{filter: none; transform: scale(1.02);}
+    .item:active{filter: none; transform: scale(1);}
+    .item p{position: relative; left: 16px; bottom: -25px; padding: 8px; width: 90%; height: 30%; background: #00000000; color: #ffffff00; border-radius: 2rem; transition: all 0.3s; font-size: 20px;}
+    .item:hover p{background: #00000054; color: #ffffff;}
+    .item a{
+        display: inline-block;
+        position: relative;
+        text-align: center;
+        left: 5%; top: 73%;
+        padding: 10px; margin: 5px;
+        color: #111;
+        font-weight: 700;
+        text-decoration: none;
+        background-color: #feffff;
+        filter: drop-shadow(3px 3px 7px #00000035);
+        border-radius: 30px;
+    }
+    .item a:hover{background-color: tomato;}
+    .item:nth-child(1) { background-color: burlywood; background: url(img/clonecoding/mockup1.png)no-repeat; background-size: cover;
+        grid-column: 1/2;
+        grid-row: 1/3;
+    }
+    .item:nth-child(2) { background-color: rosybrown; background: url(img/clonecoding/mockup2.png)no-repeat; background-size: cover; background-position: -60px;
+        grid-column: 2/3;
+        grid-row: 1/4;
+    }
+    .item:nth-child(3) {background-color: salmon; background: url(img/clonecoding/mockup3.png)no-repeat; background-size: cover; background-position: -60px;
+        grid-column: 3/4;
+        grid-row: 1/4;
+    }
+    .item:nth-child(4) {background-color: sandybrown; background: url(img/clonecoding/mockup6.png)no-repeat; background-size: cover; 
+        grid-column: 1/2;
+        grid-row: 3/6;
+    }
+    .item:nth-child(5) {background-color: royalblue; background: url(img/clonecoding/mockup4.png)no-repeat; background-size: cover; 
+        grid-column: 2/4;
+        grid-row: 4/6;
+    }
+    @media screen and (max-width:500px) {
+        .content{background: url(img/mbackground3.png)repeat-y;}
+        header li{margin: 40px 10px 0; padding:10px 5px 10px; font-size: 13px;}
+        .sec1{
+            top: 170px;
+        display: grid;
+        grid-template-columns: 100px 100px 100px;
+        grid-template-rows: 300px 300px 300px 300px 300px;
+        grid-gap: 30px;
+    }
+    .textbox{margin: 10px 0 0 30px;}
+    .textbox h3{margin-left: 100px;}
+    .textbox p{display: none;}
+    .item a{
+        text-align: center;
+        left: 12%; top: 80%;
+        padding: 10px; margin: 5px;
+    }
+    .item:nth-child(1) {
+        grid-column: 1/4;
+        grid-row: 1/2;
+    }
+    .item:nth-child(2) {
+        grid-column: 1/4;
+        grid-row: 2/3;
+        background-position: 0 0;
+    }
+    .item:nth-child(3) {
+        grid-column: 1/4;
+        grid-row: 3/4;
+        background-position: 0 0;
+    }
+    .item:nth-child(4) {
+        grid-column: 1/4;
+        grid-row: 4/5;
+    }
+    .item:nth-child(5) {
+        grid-column: 1/4;
+        grid-row: 5/6;
+    }
+        }
+</style>
+<script>
+    $(window).scroll(function(){
+        var scroll = $(window).scrollTop();
+        if(scroll >= 50) {
+            $("nav").addClass("bg");
+        } else {
+            $("nav").removeClass("bg");
+        }
+    });
+</script>
+</body>
+</html>

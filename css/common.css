@@ -1,0 +1,46 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'EliceDigitalBaeum-Bd';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_elice@1.0/EliceDigitalBaeum-Bd.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HANAMDAUM';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/HANAMDAUM.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+a{text-decoration: none !important; }
+*{font-family: 'EliceDigitalBaeum-Bd';}
+
+html, body{height: 100%;}
+.wrap{position: relative; min-height: 100%; padding-bottom: 30px;}
+footer{position: absolute; z-index: 999; bottom: 0; width: 100vw; height: 30px;}
+
+header .logo{ width:100px; height:100px; position:fixed; top:20px; left:20px;}
+header .logo img{width:100%;}
+
+header nav{max-width:1000px; margin:0 auto; border-bottom: 1px solid #0000003d; }
+header li{display: inline-block; padding:40px 80px 10px;}
+header li:hover a{color: rgb(90, 90, 234);}
+
+.call{width: 80px; height: 80px; position: fixed; float: right; top: 40px;right: 20px;}
+.call img{width: 100%;}
+
+footer .extra{position: relative; left: 1700px; padding: 5px; font-size: 13px; }
+
+footer::before{content: ''; position: absolute; bottom: 30px; right: 30px; width: calc(100% - 89%); display: inline-block; height: 1px; background-color: #0000003d;}
+
+@media screen and (max-width: 1920px){
+    footer {position: fixed;}}
+@media screen and (max-width: 500px){
+    header nav{margin-right: -1px;}
+    header .logo img{width: 50%;}
+    .call{float: right; top: 30px; right: -15px;}
+    .call img{width: 50%;}
+    footer .extra{width:100%; left:190px;}
+    footer::before{right:10%; width: calc(100% - 20%);}
+}
+
+    
